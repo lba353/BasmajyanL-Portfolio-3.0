@@ -13,19 +13,19 @@ $("document").ready(function(){
     
     $(".col-xs-2").css("background-color", "blue");
     
-    $(".inactive + .btn-default").bind("mouseover", MouseOverMe).bind("mouseout", MouseOutMe);
+    $(".inactive .btn-default").bind("mouseover", MouseOverMe).bind("mouseout", MouseOutMe);
     
-    $(".dropdown + .btn-default").bind("mouseover", MouseOver).bind("mouseout", MouseOut);
+    $(".dropdown .btn-default").bind("mouseover", MouseOver).bind("mouseout", MouseOut);
     
-    $(".active + .btn-default").bind("mouseover", MouseOn).bind("mouseout", MouseOff);
+    $(".active .btn-default").bind("mouseover", MouseOn).bind("mouseout", MouseOff);
     
     $(".jumbotron").css("color", "lime");
     
     //$(".jumbotron").css("background-image", "url(https://33.media.tumblr.com/bcf196654e236e37543014e901330c32/tumblr_nbjdcgvVXq1rv6iido1_500.gif)");
     
-    $(".h1 ~ h2").css("color", "red");
+    $(".h1 ~ h2").css("color", "blue");
     
-    $(".h1").css("color", "red");
+    $(".h1").css("color", "blue");
     
     $(".img-responsive").css("border-style", "solid");
     
@@ -36,34 +36,48 @@ $("document").ready(function(){
     $(".col-xs-2").remove();
     
     $(".col-xs-9:last").append("<h1>Projects in Progress</h1>");
+    
+    $(".col-xs-9:last .btn-default").bind("click", HideTheSection);
+    
+    $(".col-xs-9:last .btn-default").bind("dblclick", ShowTheSection);
 });
 
 function MouseOverMe() 
 {
-    $(".inactive + .btn-default").css("background-color", "red");
+    $(".inactive .btn-default").css("background-color", "red");
 }
 
 function MouseOutMe() 
 {
-    $(".inactive + .btn-default").css("background-color", "white");
+    $(".inactive .btn-default").css("background-color", "white");
 }
 
 function MouseOver() 
 {
-    $(".dropdown + .btn-default").css("background-color", "red");
+    $(".dropdown .btn-default").css("background-color", "red");
 }
 
 function MouseOut() 
 {
-    $(".dropdown + .btn-default").css("background-color", "white");
+    $(".dropdown .btn-default").css("background-color", "white");
 }
 
 function MouseOn() 
 {
-    $(".active + .btn-default").css("background-color", "blue");
+    $(".active .btn-default").css("background-color", "blue");
 }
 
 function MouseOff() 
 {
-    $(".active + .btn-default").css("background-color", "white");
+    $(".active .btn-default").css("background-color", "white");
+}
+
+function HideTheSection()
+{
+    $(".col-xs-9:last .btn-default ~ *").hide("clip", {}, 2500);
+}
+
+function ShowTheSection()
+{
+    $(".col-xs-9:last .btn-default ~ *").show("clip", {}, 2500);
 }
