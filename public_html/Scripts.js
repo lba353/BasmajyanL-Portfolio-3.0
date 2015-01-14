@@ -21,7 +21,7 @@ $("document").ready(function(){
     
     $(".jumbotron").css("color", "lime");
     
-    //$(".jumbotron").css("background-image", "url(https://33.media.tumblr.com/bcf196654e236e37543014e901330c32/tumblr_nbjdcgvVXq1rv6iido1_500.gif)");
+    $(".jumbotron").css("background-image", "url(https://33.media.tumblr.com/bcf196654e236e37543014e901330c32/tumblr_nbjdcgvVXq1rv6iido1_500.gif)");
     
     $(".h1 ~ h2").css("color", "blue");
     
@@ -35,11 +35,15 @@ $("document").ready(function(){
     
     $(".col-xs-2").remove();
     
-    $(".col-xs-9:last").append("<h1>Projects in Progress</h1>");
+    $(".col-xs-9:last").append("<h1>Projects in Progress</h1>").bind("click", PIP).addClass("Project");
     
     $(".col-xs-9:last .btn-default").bind("click", HideTheSection);
     
     $(".col-xs-9:last .btn-default").bind("dblclick", ShowTheSection);
+    
+    $(".col-xs-9:last .btn-default").bind("mouseover", OnButton).bind("mouseout", OffButton);
+    
+    $(".row:last").accordion({header: "h2"});
 });
 
 function MouseOverMe() 
@@ -72,12 +76,27 @@ function MouseOff()
     $(".active .btn-default").css("background-color", "white");
 }
 
+function OnButton() 
+{
+    $(".col-xs-9:last .btn-default").text("Click on me to close or double click to open all of this information.");
+}
+
+function OffButton() 
+{
+    $(".col-xs-9:last .btn-default").text("Are you sure?");
+}
+
 function HideTheSection()
 {
-    $(".col-xs-9:last .btn-default ~ *").hide("clip", {}, 2500);
+    $(".col-xs-9:last .btn-default ~ *").hide("fade", {}, 1000);
 }
 
 function ShowTheSection()
 {
-    $(".col-xs-9:last .btn-default ~ *").show("clip", {}, 2500);
+    $(".col-xs-9:last .btn-default ~ *").show("fade", {}, 1000);
+}
+
+function PIP()
+{
+    $(".Project").append("<p>There are no Projects in Progress!</p>");
 }
