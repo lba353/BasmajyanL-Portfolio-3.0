@@ -1,9 +1,11 @@
+var shown = false;
+
 $("document").ready(function(){
     $(".col-xs-9").css("color", "blue");
     
     $(".col-xs-9").css("background-color", "yellow");
     
-    $("ul li").css("padding", "6px 150px");
+    $("ul li").css("padding", "5px 150px");
     
     $(".col-xs-3").css("background-color", "yellow");
     
@@ -14,6 +16,8 @@ $("document").ready(function(){
     $(".col-xs-2").css("background-color", "blue");
     
     $(".inactive .btn-default").bind("mouseover", MouseOverMe).bind("mouseout", MouseOutMe);
+    
+    $(".inactive2 .btn-default").bind("mouseover", MouseOverMe2).bind("mouseout", MouseOutMe2);
     
     $(".dropdown .btn-default").bind("mouseover", MouseOver).bind("mouseout", MouseOut);
     
@@ -35,7 +39,7 @@ $("document").ready(function(){
     
     $(".col-xs-2").remove();
     
-    $(".col-xs-9:last").append("<h1>Projects in Progress</h1>").bind("click", PIP).addClass("Project");
+    $(".Projects").append("<h1>Projects in Progress</h1>").bind("click", PIP);
     
     $(".col-xs-9:last .btn-default").bind("click", HideTheSection);
     
@@ -54,6 +58,16 @@ function MouseOverMe()
 function MouseOutMe() 
 {
     $(".inactive .btn-default").css("background-color", "white");
+}
+
+function MouseOverMe2() 
+{
+    $(".inactive2 .btn-default").css("background-color", "red");
+}
+
+function MouseOutMe2() 
+{
+    $(".inactive2 .btn-default").css("background-color", "white");
 }
 
 function MouseOver() 
@@ -98,5 +112,8 @@ function ShowTheSection()
 
 function PIP()
 {
-    $(".Project").append("<p>There are no Projects in Progress!</p>");
+    if(!shown){
+        $(".Projects").append("<p>There are no Projects in Progress!</p>");
+        shown = true;
+    }
 }
