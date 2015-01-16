@@ -33,7 +33,7 @@ $("document").ready(function(){
     
     $(".img-responsive").css("border-style", "solid");
     
-    $(".img-responsive").css("border-width", "10px");
+    $(".img-responsive").css("border-width", "5px");
     
     $(".img-responsive").css("border-color", "blue");
     
