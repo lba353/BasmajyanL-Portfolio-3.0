@@ -38,6 +38,7 @@ nav li li {
 /* flip the pane when hovered */
 .flip-container:hover .flipper, .flip-container.hover .flipper {
     transform: rotateY(180deg);
+    cursor: url(http://40kflips.com/opt-in1/images/red-arrow.png);
 }
 
 .flip-container, .front, .back {
@@ -50,7 +51,7 @@ nav li li {
     transition: 0.6s;
     transform-style: preserve-3d;
 
-	position: relative;
+    position: relative;
 }
 
 /* hide back of pane during swap */
@@ -76,10 +77,10 @@ nav li li {
     border: none;
 }
 
-.front{
+.front {
     border: none;
 }
 
-.back{
+.back {
     border: none;
 }
