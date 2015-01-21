@@ -38,7 +38,6 @@ nav li li {
 /* flip the pane when hovered */
 .flip-container:hover .flipper, .flip-container.hover .flipper {
     transform: rotateY(180deg);
-    cursor: url(http://40kflips.com/opt-in1/images/red-arrow.png);
 }
 
 .flip-container, .front, .back {
@@ -83,4 +82,17 @@ nav li li {
 
 .back {
     border: none;
+}
+
+.flip-container a {
+    cursor: pointer;
+    transition: padding-left 250ms ease-out;
+}
+
+.flip-container a:hover {
+    padding-left: 40px;
+}
+
+.flip-container {
+    cursor: url("../Images/favicon.ico"), default;
 }
