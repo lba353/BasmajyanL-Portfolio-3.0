@@ -11,10 +11,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     </head>
     <body>
+        <!-- Sets the jumbotron and the text that goes inside -->
         <div class="jumbotron">
             <h1 align="center">Portfolio Website v2</h1>
             <p align="center">My name is Ludvig Basmajyan and this is my second version of my Portfolio Project.</p>
         </div>
+        <!-- Sets the navbar and the tabs -->
         <nav class="navbar" role="navigation">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -22,6 +24,7 @@
                         <li class="inactive"><a class="btn btn-default" href="index.html">About Me</a></li> 
                         <li class="inactive2"><a class="btn btn-default" href="Projects.html">Projects</a></li>
                         <li class="active"  class="dropdown"> 
+                            <!-- Sets the dropdown -->
                             <a class="btn btn-default"  href="Technology.html" class="dropdown-toggle" data-toggle="dropdown">Technology<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="Technology.html">Top of Technology Page</a></li>
@@ -32,7 +35,13 @@
                                 <li class="divider"></li>
                                 <li><a href="Technology.html#Bootstrap">Bootstrap</a></li>
                                 <li class="divider"></li>
+                                <li><a href="Technology.html#JS">JS</a></li>
+                                <li class="divider"></li>
+                                <li><a href="Technology.html#MelonJS">MelonJS</a></li>
+                                <li class="divider"></li>
                                 <li><a href="Technology.html#Tiled">Tiled</a></li>
+                                <li class="divider"></li>
+                                <li><a href="Technology.html#JQuery">JQuery</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -56,6 +65,7 @@
                         </div>
                         <div align="center" class="col-xs-9">                  
                             <p>These are the programs I used to create this website and my other projects.</p>
+                            <!-- These lines of code (60-148) make an image, but when hovered over shows text.-->
                             <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                                 <div class="flipper">
                                     <div class="front">
@@ -103,7 +113,9 @@
                                     </div>
                                     <div class="back">
                                         <h3><a href="http://www.w3schools.com/js/">JavaScript</a></h3>
-                                        <p></p>
+                                        <p>JavaScript is a program that uses variables <br>
+                                           and functions to make more complex websites <br>
+                                           and even games.</p>
                                     </div>
                                 </div>
                             </div>
@@ -114,7 +126,9 @@
                                     </div>
                                     <div class="back">
                                         <h3><a href="http://www.melonjs.org">MelonJS</a></h3>
-                                        <p></p>
+                                        <p>MelonJS is a platform that runs games <br>
+                                           and also works with Tiled. The functions <br>
+                                           used to run the game were made by JavaScript.</p>
                                     </div>
                                 </div>
                             </div>
@@ -140,7 +154,8 @@
                                         <h3><a href="http://www.jquery.com">JQuery</a></h3>
                                         <p>JQuery, which can be obtained by linking <br>
                                            a certain version of JQuery to your HTML <br>
-                                           page, is a software</p>
+                                           page, is a software which can make it easier <br>
+                                           to edit your website.</p>
                                     </div>
                                 </div>
                             </div>
@@ -148,6 +163,7 @@
                     </div>
                 </div>
                 <div class="col-xs-2">
+                    <!-- Extra links -->
                     <h1 align="center">LINKS</h1>
                     <nav class="list-group">
                         <a class="list-group-item" href="index.html">About Me</a>
@@ -160,4 +176,9 @@
         <script type="text/javascript" src="Scripts.js"></script>
         <script src="js/bootstrap.min.js"></script>
     </body>
+    <!-- SCM Music Player http://scmplayer.net -->
+    <script type="text/javascript" src="http://scmplayer.net/script.js" 
+    data-config="{'skin':'skins/cyber/skin.css','volume':29,'autoplay':true,'shuffle':false,'repeat':0,'placement':'bottom','showplaylist':false,'playlist':[{'title':'Super  Smash Bros 4 Main Theme','url':'https://www.youtube.com/watch?v=5oogHTAQJkg'},{'title':'Mega Man 2 Medley ','url':'https://www.youtube.com/watch?v=U3VdGw0YmUc'},{'title':'Stickerbrush Symphony','url':'https://www.youtube.com/watch?v=7Mj3CqW75uQ'}]}" ></script>
+    <!-- SCM Music Player script end -->
+
 </html>
