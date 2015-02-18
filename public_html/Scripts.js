@@ -31,7 +31,7 @@ $("document").ready(function(){
     $(".jumbotron").css("color", "lime");
     
     $(".jumbotron").css("background-image", "url(https://33.media.tumblr.com/bcf196654e236e37543014e901330c32/tumblr_nbjdcgvVXq1rv6iido1_500.gif)");
-
+   
     $(".h1 ~ h2").css("color", "blue");
     
     $(".h1").css("color", "blue");
